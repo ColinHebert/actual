@@ -53,7 +53,7 @@ Configuration is resolved in this order (highest priority first):
 | `ACTUAL_NO_LOCK`             | Set to `1` to disable budget-dir locking              |
 | `ACTUAL_ENCRYPTION_PASSWORD` | Password for end-to-end encrypted budget files        |
 
-The three secrets — `ACTUAL_PASSWORD`, `ACTUAL_SESSION_TOKEN` and `ACTUAL_ENCRYPTION_PASSWORD` — can be read from a file instead, by adding `_FILE` to the variable name (for example `ACTUAL_PASSWORD_FILE=/run/secrets/actual-password`). The file wins over the plain variable, and the command stops with an error if it can't be read.
+The three secrets — `ACTUAL_PASSWORD`, `ACTUAL_SESSION_TOKEN` and `ACTUAL_ENCRYPTION_PASSWORD` — can be read from a file instead, by adding `_FILE` to the variable name (for example `ACTUAL_PASSWORD_FILE=/run/secrets/actual-password`). `_FILE`-suffixed environment variables take priority over regular ones.
 
 ### Config File
 
